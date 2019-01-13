@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>!szx dll header</Title>
+			<Shortcut>#dh</Shortcut>
+			<Description>Header file template for dll</Description>
+			<Author>szx</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>ProjectNameUpper</ID>
+					<ToolTip>Upper cased project name</ToolTip>
+					<Default>PROJECT_NAME_UPPER</Default>
+				</Literal>
+				<Literal>
+					<ID>TargetName</ID>
+					<ToolTip>Target name which is usually the same as project name</ToolTip>
+					<Default>TargetName</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp">
+				<![CDATA[#ifdef $ProjectNameUpper$_EXPORTS
+#define $ProjectNameUpper$_API __declspec(dllexport)
+#else
+#define $ProjectNameUpper$_API __declspec(dllimport)
+#define SZX_LIB_PATH "../Release/$TargetName$.lib" // will be used for implicit link in compile time.
+#pragma comment(lib, SZX_LIB_PATH)
+#undef SZX_LIB_PATH
+#endif
+
+
+// declarations (use $ProjectNameUpper$_API before them).
+$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>!szx disable warning</Title>
+			<Shortcut>#dw</Shortcut>
+			<Description>Disable Warning</Description>
+			<Author>szx</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>WarningCode</ID>
+					<ToolTip>Warning Code</ToolTip>
+					<Default>4127</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp">
+				<![CDATA[#pragma warning (push)
+#pragma warning(disable: $WarningCode$)
+$selected$ $end$
+#pragma warning(pop)
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

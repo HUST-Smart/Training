@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>!szx class</Title>
+			<Shortcut>class</Shortcut>
+			<Description>Class with regions</Description>
+			<Author>szx</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Class name</ToolTip>
+					<Default>ClassName</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp">
+				<![CDATA[class $name$ {
+	#pragma region Type
+public:
+	#pragma endregion Type
+
+	#pragma region Constant
+public:
+	#pragma endregion Constant
+
+	#pragma region Constructor
+public:
+	$end$
+	#pragma endregion Constructor
+
+	#pragma region Method
+public:
+	#pragma endregion Method
+
+	#pragma region Field
+public:
+	#pragma endregion Field
+}; // $name$
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

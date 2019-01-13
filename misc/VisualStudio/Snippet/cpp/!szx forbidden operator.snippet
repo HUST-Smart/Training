@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>!szx forbidden operator</Title>
+			<Shortcut>#fo</Shortcut>
+			<Description>Operators that must not be called by user</Description>
+			<Author>szx</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal Editable="false">
+					<ID>ClassName</ID>
+					<ToolTip>Class name</ToolTip>
+					<Function>TypeName()</Function>
+					<Default>ClassName</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp">
+				<![CDATA[private: // operators that must not be called by user.
+$ClassName$& operator=(const $ClassName$ &) { return *this; }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

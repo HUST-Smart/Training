@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>!szx stopwatch</Title>
+			<Shortcut>sw</Shortcut>
+			<Description>Test run time with StopWatch</Description>
+			<Author>szx</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>WatchName</ID>
+					<ToolTip>Name of the StopWatch object</ToolTip>
+					<Default>sw</Default>
+				</Literal>
+				<Literal>
+					<ID>LoopCount</ID>
+					<ToolTip>Loop count</ToolTip>
+					<Default>1000000</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[Stopwatch $WatchName$ = new Stopwatch();
+
+$WatchName$.Restart();
+$selected$ $end$
+$WatchName$.Stop();
+Console.WriteLine($WatchName$.ElapsedMilliseconds);]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

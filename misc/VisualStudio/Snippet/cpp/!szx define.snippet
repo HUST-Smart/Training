@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>!szx define</Title>
+			<Shortcut>#d</Shortcut>
+			<Description>macro to work with not only #ifdef but also #if</Description>
+			<Author>szx</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>MacroName</ID>
+					<ToolTip>Macro name</ToolTip>
+					<Default>MacroName</Default>
+				</Literal>
+				<Literal>
+					<ID>Expression</ID>
+					<ToolTip>Value of the macro</ToolTip>
+					<Default>true</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp">
+				<![CDATA[#define $MacroName$  $Expression$
+$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>!szx todo</Title>
+			<Shortcut>#td</Shortcut>
+			<Description>Comment for task list</Description>
+			<Author>szx</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>Author</ID>
+					<ToolTip>Person in charge of the code</ToolTip>
+					<Default>szx</Default>
+				</Literal>
+				<Literal>
+					<ID>Precedence</ID>
+					<ToolTip>Precedence of the task</ToolTip>
+					<Default>5</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[// TODO[$Author$][$Precedence$]: $end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

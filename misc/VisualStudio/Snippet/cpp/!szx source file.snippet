@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>!szx source file</Title>
+			<Shortcut>#sf</Shortcut>
+			<Description>Template for source file</Description>
+			<Author>szx</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>HeaderFile</ID>
+					<ToolTip>Corresponding header file</ToolTip>
+					<Default>HeaderFile</Default>
+				</Literal>
+				<Literal>
+					<ID>Namespace</ID>
+					<ToolTip>namespace for the file</ToolTip>
+					<Default>szx</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp">
+				<![CDATA[#include "$HeaderFile$"
+
+
+using namespace std;
+
+
+namespace $Namespace$ {
+
+$selected$ $end$
+
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

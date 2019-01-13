@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>!szx dll main</Title>
+			<Shortcut>#dm</Shortcut>
+			<Description>Entrance of a dll project</Description>
+			<Author>szx</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[#include <windows.h>
+
+
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) {
+	switch (ul_reason_for_call) {
+		case DLL_PROCESS_ATTACH:$end$
+		case DLL_PROCESS_DETACH:
+		case DLL_THREAD_ATTACH:
+		case DLL_THREAD_DETACH:
+			break;
+	}
+	return TRUE;
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

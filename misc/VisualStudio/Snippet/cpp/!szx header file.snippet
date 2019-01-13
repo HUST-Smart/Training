@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>!szx header file</Title>
+			<Shortcut>#hf</Shortcut>
+			<Description>Template for header file</Description>
+			<Author>szx</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>HeaderGuard</ID>
+					<ToolTip>Header guard for header file</ToolTip>
+					<Default>ORGANIZATION_AUTHOR_PROJECT_FILE_H</Default>
+				</Literal>
+				<Literal>
+					<ID>Namespace</ID>
+					<ToolTip>namespace for the file</ToolTip>
+					<Default>szx</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp">
+				<![CDATA[////////////////////////////////
+/// usage : 1.	$end$
+/// 
+/// note  : 1.	
+////////////////////////////////
+
+#ifndef $HeaderGuard$
+#define $HeaderGuard$
+
+
+namespace $Namespace$ {
+
+$selected$
+
+}
+
+
+#endif // $HeaderGuard$
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
